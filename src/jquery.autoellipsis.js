@@ -246,6 +246,21 @@
     }
 
     /**
+     * Strips whitespace from the right end of the given string.
+     *
+     * @param {string} str string that needs whitespace removed.
+     * @return {string} A copy of the string with whitespace removed from the right end.
+     * @private
+     */
+    function rightTrim(str) {
+        // adapted from: http://blog.stevenlevithan.com/archives/faster-trim-javascript
+        var ws = /\s/;
+        var i = str.length;
+        while (ws.test(str.charAt(--i)));
+        return str.slice(0, i + 1);
+    }
+
+    /**
      * Performs ellipsis on the last text node of the given element. Ellipsis is done by removing a full word.
      *
      * @param {jQuery} element jQuery object containing a single DOM element.
@@ -263,7 +278,7 @@
             // removed.
             var pos = text.lastIndexOf(' ');
             if (pos > -1) {
-                text = $.trim(text.substring(0, pos));
+                text = rightTrim(text.substring(0, pos));
                 lastTextNode.get(0).nodeValue = text;
 
             } else {
