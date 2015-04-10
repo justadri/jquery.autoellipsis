@@ -197,7 +197,10 @@
                         getLastTextNode(selectedElement).get(0).nodeValue += settings.ellipsis;
                         deferAppendEllipsis = false;
                     }
-
+                    
+                    absolutePositionedChildren = wrapperElement.children().map(function(index, child) { if ($(child).css('position') == 'absolute') {return child}});
+                    $(absolutePositionedChildren).css('position', 'static');
+                    
                     // Iterate until wrapper element height is less than or equal to the original container element
                     // height plus possible wrapperOffset.
                     while (wrapperElement.innerHeight() > containerElementHeight + wrapperOffset) {
@@ -229,7 +232,8 @@
                             break;
                         }
                     }
-
+                    
+                    $(absolutePositionedChildren).css('position', 'absolute');
                     // If the "setTitle" property is set to "onEllipsis" and the ellipsis has been applied, or if the
                     // property is set to "always", the add the "title" attribute with the original text. Else remove the
                     // "title" attribute. When the "setTitle" property is set to "never" we do not touch the "title"
