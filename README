@@ -2,3 +2,7 @@ README
 jquery.autoellipsis
 
 For instructions see http://pvdspek.github.com/jquery.autoellipsis
+
+---
+
+This fork of pvdspek/jquery.autoellipsis adds a package.json file.
