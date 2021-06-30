@@ -5,6 +5,7 @@
   "author": "Peter van der Spek",
   "repository": "kemitchell/jquery.autoellipsis",
   "license": "MIT",
+  "index": "src/jquery.autoellipsis.js",
   "devDependencies": {
     "uglify-js": "^3.13.10"
   }
