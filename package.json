@@ -4,5 +4,8 @@
   "description": "auto-ellipsis plugin for jQuery",
   "author": "Peter van der Spek",
   "repository": "kemitchell/jquery.autoellipsis",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "uglify-js": "^3.13.10"
+  }
 }
