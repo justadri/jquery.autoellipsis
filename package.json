@@ -1,5 +1,5 @@
 {
-  "name": "jquery.autoellipsis",
+  "name": "@kemitchell/jquery.autoellipsis",
   "version": "1.0.10",
   "description": "auto-ellipsis plugin for jQuery",
   "author": "Peter van der Spek",
