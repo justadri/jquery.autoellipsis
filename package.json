@@ -1,0 +1,12 @@
+{
+  "name": "@kemitchell/jquery.autoellipsis",
+  "version": "1.0.10",
+  "description": "auto-ellipsis plugin for jQuery",
+  "author": "Peter van der Spek",
+  "repository": "kemitchell/jquery.autoellipsis",
+  "license": "MIT",
+  "index": "src/jquery.autoellipsis.js",
+  "devDependencies": {
+    "uglify-js": "^3.13.10"
+  }
+}
